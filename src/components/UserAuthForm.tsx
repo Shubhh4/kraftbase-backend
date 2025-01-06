@@ -8,8 +8,6 @@ import '../styles/userAuth.css'
 import { isValidEmail } from '../utils/checkValidEmail';
 import { errorMessage } from '../utils/toastMessage';
 import { UserAuthFormProps } from '../types/userAuthFormTypes';
-import login from "../../public/login-7103076.png";
-import signup from "../../public/sign.jpg"
 
 
 const UserAuthForm: React.FC<UserAuthFormProps> = ({
