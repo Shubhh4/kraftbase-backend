@@ -1,0 +1,134 @@
+.kanbanBoard {
+    width: 100%;
+    min-height: 80vh;
+    overflow-x: auto;
+    background-color: #bcd0ee; /* Soft background color for the board */
+    border-radius: 10px; /* Rounded corners for the board */
+    padding: 20px; /* Added padding for better spacing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.columnWrapper {
+    display: flex;
+    width: max-content;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 30px;
+}
+
+.singleColumn {
+    min-height: 500px;
+    width: 300px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners for columns */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effects */
+}
+
+.singleColumn:hover {
+    transform: translateY(-5px); /* Hover lift effect */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.singleColumnHeading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+    font-weight: bold;
+    font-size: 16px; /* Better readability */
+    margin-bottom: 15px; /* Spacing below heading */
+}
+
+.singleContainerTasks {
+    border: 1px solid rgb(106, 4, 4);
+    width: 95%;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 15px;
+    min-height: 100px;
+    padding: 10px;
+    cursor: all-scroll;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #86df96; /* Subtle white background for tasks */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effects */
+}
+
+.singleContainerTasks:hover {
+    transform: scale(1.02); /* Slight enlargement on hover */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for tasks */
+}
+
+.singleContainerTasks .label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftLabel p {
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-weight: bold; /* Emphasize labels */
+}
+
+.easyLabel {
+    background-color: green;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0, 128, 0, 0.2); /* Add depth to labels */
+}
+
+.mediumLabel {
+    background-color: yellow;
+    color: black;
+    box-shadow: 0px 2px 4px rgba(255, 255, 0, 0.2);
+}
+
+.hardLabel {
+    background-color: red;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(255, 0, 0, 0.2);
+}
+
+.rightLabel img {
+    width: 20px;
+    transition: transform 0.2s; /* Smooth animation */
+}
+
+.rightLabel img:hover {
+    transform: scale(1.2); /* Slight enlargement on hover */
+}
+
+.singleColumnHeading span {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px; /* Better readability */
+    transition: color 0.2s; /* Smooth hover effect */
+}
+
+.singleColumnHeading span:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+.dragging {
+    background-color: rgb(249, 249, 249);
+    opacity: 0.5; /* Adjusted opacity for better visibility */
+    border: 2px dashed #ccc; /* Add dashed border to highlight dragging */
+}
+
+.taskDragging {
+    background-color: lightgray;
+    opacity: 0.5;
+    border: 2px dashed #aaa; /* Dashed border for tasks being dragged */
+}
